@@ -54,7 +54,7 @@ public class UserServiceTest {
 		when(userRepository.existsByEmailId("sham")).thenReturn(true);
 		when(userRepository.findByEmailId("sham")).thenReturn(user);
 		assertNotNull(userService.forgotPassword(loginRequest));
-		assertEquals("New Password updatede successfully!", userService.forgotPassword(loginRequest));
+		assertEquals("New Password updated successfully!", userService.forgotPassword(loginRequest));
 	}
 	
 	@Test
