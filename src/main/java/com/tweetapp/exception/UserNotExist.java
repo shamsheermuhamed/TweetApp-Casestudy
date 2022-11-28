@@ -5,13 +5,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+
 @ControllerAdvice
-public class UserNotLoggedInException extends RuntimeException {
+public class UserNotExist extends RuntimeException {
 		
 		@ExceptionHandler
-		public ResponseEntity<Object> exception(UserNotLoggedInException ex)
+		public ResponseEntity<Object> exception(UserNotExist ex)
 		{
-			return new ResponseEntity<>("User is not LoggedIn. Please Login to view the details!",HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>("User Not Registered in System. Please Register !",HttpStatus.NOT_ACCEPTABLE);
 		}
 
 }

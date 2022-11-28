@@ -11,7 +11,7 @@ public class UserAlreadyExistsException extends RuntimeException {
 		@ExceptionHandler
 		public ResponseEntity<Object> exception(UserAlreadyExistsException ex)
 		{
-			return new ResponseEntity<>("User Already Exists",HttpStatus.NOT_ACCEPTABLE);
+			return new ResponseEntity<>("Email Id is already taken !",HttpStatus.NOT_ACCEPTABLE);
 		}
 
 }

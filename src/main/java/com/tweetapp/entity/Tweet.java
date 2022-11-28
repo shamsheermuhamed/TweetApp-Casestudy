@@ -12,14 +12,14 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class Tweet {
 	
-	@Id
+	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@JsonIgnore
 	private Integer tweetId;	
 	
 	private String email;
 	private String tweet;
-	private Date date;
+	private Date tweetTime;
 	
 	public Tweet() {
 		
@@ -54,12 +54,12 @@ public class Tweet {
 		this.tweetId = tweetId;
 	}
 
-	public Date getDate() {
-		return date;
+	public Date getTweetTime() {
+		return tweetTime;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setTweetTime(Date tweetTime) {
+		this.tweetTime = tweetTime;
 	}
-	
+
 }
