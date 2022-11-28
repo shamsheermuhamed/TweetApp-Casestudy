@@ -1,5 +1,6 @@
 package com.tweetapp.service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -41,6 +42,7 @@ public class TweetService {
 			Tweet tweet=new Tweet();
 			tweet.setEmail(tweetRequest.getEmail());
 			tweet.setTweet(tweetRequest.getTweet());
+			tweet.setDate(new Date());
 			tweetRepository.save(tweet);
 			return "Tweet updated";
 		}

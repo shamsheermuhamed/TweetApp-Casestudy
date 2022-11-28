@@ -1,5 +1,7 @@
 package com.tweetapp.entity;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,6 +19,7 @@ public class Tweet {
 	
 	private String email;
 	private String tweet;
+	private Date date;
 	
 	public Tweet() {
 		
@@ -50,6 +53,13 @@ public class Tweet {
 	public void setTweetId(Integer tweetId) {
 		this.tweetId = tweetId;
 	}
-	
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
 	
 }
